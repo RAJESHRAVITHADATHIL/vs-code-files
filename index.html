@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rajesh Coding</title>
+  <title>Rajesh Coding | Home</title>
   <style>
     * {
       box-sizing: border-box;
@@ -43,8 +43,9 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
       font-weight: 800;
-      letter-spacing: 0;
       font-size: 1.05rem;
     }
 
@@ -69,22 +70,20 @@
 
     .nav-button,
     .hero-button {
-      border: 0;
-      cursor: pointer;
-      text-decoration: none;
-      font: inherit;
-      color: #191335;
-      background: #ffffff;
-      border-radius: 999px;
       min-height: 44px;
       padding: 12px 20px;
+      border-radius: 999px;
+      color: #191335;
+      background: #ffffff;
+      text-decoration: none;
       font-weight: 800;
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
       transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
 
     .nav-button:hover,
-    .hero-button:hover {
+    .hero-button:hover,
+    .nav-button.active {
       transform: translateY(-3px);
       box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
       background: #ffeb3b;
@@ -102,19 +101,19 @@
     }
 
     .hero h1 {
+      max-width: 780px;
       font-size: clamp(3rem, 8vw, 6.7rem);
       line-height: 0.92;
       letter-spacing: 0;
-      max-width: 760px;
       text-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
     }
 
     .hero p {
       margin-top: 24px;
       max-width: 590px;
+      color: rgba(255, 255, 255, 0.9);
       font-size: clamp(1rem, 2vw, 1.28rem);
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.9);
     }
 
     .hero-actions {
@@ -151,9 +150,7 @@
       aspect-ratio: 1 / 1.08;
       top: 0;
       right: 0;
-      background:
-        linear-gradient(140deg, rgba(255, 255, 255, 0.15), transparent 40%),
-        linear-gradient(135deg, #00e5ff, #7c4dff 52%, #ff4081);
+      background: linear-gradient(135deg, #00e5ff, #7c4dff 52%, #ff4081);
     }
 
     .tile.two {
@@ -189,57 +186,6 @@
       font-weight: 800;
     }
 
-    section {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto 46px;
-      padding: 30px;
-      border-radius: 26px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.2);
-    }
-
-    section h2 {
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      margin-bottom: 14px;
-    }
-
-    section p {
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.7;
-      max-width: 780px;
-    }
-
-    .gallery-grid {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .gallery-item {
-      min-height: 145px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--start), var(--end));
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
-    }
-
-    .contact-line {
-      margin-top: 18px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .contact-chip {
-      padding: 12px 16px;
-      border-radius: 999px;
-      color: #1c1237;
-      background: rgba(255, 255, 255, 0.92);
-      font-weight: 800;
-    }
-
     @media (max-width: 800px) {
       header {
         align-items: flex-start;
@@ -258,64 +204,43 @@
       .showcase {
         min-height: 350px;
       }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <div class="logo">
-        <div class="logo-mark">VS</div>
-        <span>Vibrant Studio</span>
-      </div>
+      <a class="logo" href="index.html">
+        <span class="logo-mark">RC</span>
+        <span>Rajesh Coding</span>
+      </a>
       <nav aria-label="Main navigation">
-        <a class="nav-button" href="#Gallery">Gallery</a>
-        <a class="nav-button" href="#contact">Contact</a>
+        <a class="nav-button active" href="index.html">Home</a>
+        <a class="nav-button" href="about.html">About</a>
+        <a class="nav-button" href="gallery.html">Gallery</a>
+        <a class="nav-button" href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main>
       <div class="hero">
-        <h1>Colorful ideas, beautifully shown.</h1>
+        <h1>Colorful ideas, beautifully coded.</h1>
         <p>
-          A lively one-page space for your creative work, events, art, photos,
-          or portfolio highlights.
+          Welcome to a vibrant creative space for web pages, visual designs,
+          project galleries, and friendly collaboration.
         </p>
         <div class="hero-actions">
-          <a class="hero-button primary" href="#gallery">View Gallery</a>
-          <a class="hero-button" href="#contact">Contact Us</a>
+          <a class="hero-button primary" href="gallery.html">View Gallery</a>
+          <a class="hero-button" href="contact.html">Contact Us</a>
         </div>
       </div>
 
       <div class="showcase" aria-label="Abstract gallery preview">
-        <div class="tile one"><span class="tile-label">Fresh</span></div>
-        <div class="tile two"><span class="tile-label">Bright</span></div>
-        <div class="tile three"><span class="tile-label">Creative</span></div>
+        <div class="tile one"><span class="tile-label">Design</span></div>
+        <div class="tile two"><span class="tile-label">Code</span></div>
+        <div class="tile three"><span class="tile-label">Create</span></div>
       </div>
     </main>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p>Explore a bold mix of energetic colors, playful shapes, and polished visual moments.</p>
-      <div class="gallery-grid">
-        <div class="gallery-item" style="--start:#ff4081;--end:#ffeb3b;"></div>
-        <div class="gallery-item" style="--start:#00e5ff;--end:#7c4dff;"></div>
-        <div class="gallery-item" style="--start:#00c853;--end:#ffb300;"></div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Ready to connect? Reach out and start something memorable.</p>
-      <div class="contact-line">
-        <span class="contact-chip">hello@example.com</span>
-        <span class="contact-chip">+91 98765 43210</span>
-      </div>
-    </section>
   </div>
 </body>
 </html>

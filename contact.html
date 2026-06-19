@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajesh Coding | Contact</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 16% 20%, rgba(255, 64, 129, 0.78), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(0, 229, 255, 0.7), transparent 27%),
+        radial-gradient(circle at 70% 86%, rgba(255, 235, 59, 0.78), transparent 28%),
+        linear-gradient(135deg, #17153b 0%, #7b1fa2 44%, #ff6f00 100%);
+    }
+    header {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #00e5ff, #ffeb3b 48%, #ff4081);
+      color: #1b1238;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+      font-weight: 900;
+    }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-button {
+      min-height: 44px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      color: #191335;
+      background: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+    .nav-button:hover, .nav-button.active {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+      background: #ffeb3b;
+    }
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 54px 0 70px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(290px, 1.1fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .intro,
+    form {
+      padding: clamp(24px, 4vw, 42px);
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+      backdrop-filter: blur(14px);
+    }
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5.6rem);
+      line-height: 0.96;
+    }
+    p {
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .contact-chip {
+      display: inline-block;
+      margin: 20px 10px 0 0;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: #1c1237;
+      background: rgba(255, 255, 255, 0.92);
+      font-weight: 800;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 14px;
+      color: #1c1237;
+      background: rgba(255, 255, 255, 0.92);
+      font: inherit;
+      outline: none;
+    }
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    button {
+      min-height: 46px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 999px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #00bcd4, #ff4081);
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+    }
+    @media (max-width: 850px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { justify-content: flex-start; }
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">RC</span>
+      <span>Rajesh Coding</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-button" href="index.html">Home</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button" href="gallery.html">Gallery</a>
+      <a class="nav-button active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Contact</h1>
+      <p>Send a message, ask a question, or start a new creative web project.</p>
+      <span class="contact-chip">hello@example.com</span>
+      <span class="contact-chip">+91 98765 43210</span>
+    </section>
+
+    <form>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name" />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>
