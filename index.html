@@ -132,6 +132,103 @@
       flex-wrap: wrap;
     }
 
+    .page-list {
+      margin-top: 34px;
+      display: grid;
+      gap: 14px;
+      max-width: 560px;
+      list-style: none;
+    }
+
+    .page-list a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 72px;
+      padding: 18px 22px;
+      border-radius: 18px;
+      color: #ffffff;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.26);
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+      transition:
+        transform 220ms ease,
+        border-color 220ms ease,
+        background 220ms ease,
+        box-shadow 220ms ease;
+    }
+
+    .page-list a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.24), rgba(255, 64, 129, 0.18));
+      opacity: 0;
+      transition: opacity 220ms ease;
+    }
+
+    .page-list a:hover,
+    .page-list a:focus-visible {
+      transform: translateX(12px) translateY(-4px);
+      border-color: rgba(128, 247, 255, 0.48);
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 22px 48px rgba(0, 229, 255, 0.14);
+      outline: none;
+    }
+
+    .page-list a:hover::before,
+    .page-list a:focus-visible::before {
+      opacity: 1;
+    }
+
+    .page-title,
+    .page-note,
+    .page-arrow {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-title {
+      display: block;
+      font-size: 1.08rem;
+      font-weight: 900;
+    }
+
+    .page-note {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .page-arrow {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #0b1024;
+      background: #80f7ff;
+      font-weight: 900;
+      transform: translateX(-6px);
+      opacity: 0.78;
+      transition: transform 220ms ease, opacity 220ms ease, background 220ms ease;
+    }
+
+    .page-list a:hover .page-arrow,
+    .page-list a:focus-visible .page-arrow {
+      transform: translateX(0);
+      opacity: 1;
+      background: #ffeb3b;
+    }
+
     .hero-button.primary {
       color: #ffffff;
       background: linear-gradient(135deg, rgba(0, 229, 255, 0.75), rgba(255, 64, 129, 0.72));
@@ -246,6 +343,35 @@
           Welcome to a vibrant creative space for web pages, visual designs,
           project galleries, and friendly collaboration.
         </p>
+        <ul class="page-list" aria-label="Website pages">
+          <li>
+            <a href="about.html">
+              <span>
+                <span class="page-title">About</span>
+                <span class="page-note">R&D Engineer profile and strengths</span>
+              </span>
+              <span class="page-arrow">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html">
+              <span>
+                <span class="page-title">Gallery</span>
+                <span class="page-note">Creative project and design collection</span>
+              </span>
+              <span class="page-arrow">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span>
+                <span class="page-title">Contact</span>
+                <span class="page-note">Send a message or start a project</span>
+              </span>
+              <span class="page-arrow">›</span>
+            </a>
+          </li>
+        </ul>
         <div class="hero-actions">
           <a class="hero-button primary" href="gallery.html">View Gallery</a>
           <a class="hero-button" href="contact.html">Contact Us</a>
