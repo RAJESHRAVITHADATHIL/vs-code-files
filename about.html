@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rajesh Coding | About</title>
+  <title>Rajesh Coding | R&D Engineer</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       min-height: 100vh;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -15,7 +20,9 @@
         radial-gradient(circle at 86% 20%, rgba(0, 229, 255, 0.68), transparent 26%),
         radial-gradient(circle at 76% 86%, rgba(255, 64, 129, 0.78), transparent 30%),
         linear-gradient(135deg, #17153b 0%, #7b1fa2 45%, #ff6f00 100%);
+      overflow-x: hidden;
     }
+
     header {
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
@@ -25,6 +32,7 @@
       justify-content: space-between;
       gap: 18px;
     }
+
     .logo {
       display: flex;
       align-items: center;
@@ -34,6 +42,7 @@
       font-weight: 800;
       font-size: 1.05rem;
     }
+
     .logo-mark {
       width: 42px;
       height: 42px;
@@ -45,8 +54,16 @@
       box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
       font-weight: 900;
     }
-    nav { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
-    .nav-button {
+
+    nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-button,
+    .button {
       min-height: 44px;
       padding: 12px 20px;
       border-radius: 999px;
@@ -57,17 +74,22 @@
       box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
       transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
-    .nav-button:hover, .nav-button.active {
+
+    .nav-button:hover,
+    .nav-button.active,
+    .button:hover {
       transform: translateY(-3px);
       box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
       background: #ffeb3b;
     }
+
     main {
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
       padding: 54px 0 70px;
     }
-    .panel {
+
+    .profile-panel {
       padding: clamp(26px, 5vw, 56px);
       border-radius: 26px;
       background: rgba(255, 255, 255, 0.16);
@@ -75,37 +97,114 @@
       box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
       backdrop-filter: blur(14px);
     }
-    h1 {
-      max-width: 820px;
-      font-size: clamp(2.6rem, 7vw, 5.8rem);
-      line-height: 0.96;
+
+    .eyebrow {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: #1b1238;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      font-weight: 900;
     }
-    p {
-      margin-top: 22px;
-      max-width: 780px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.1rem;
+
+    h1 {
+      margin-top: 20px;
+      max-width: 860px;
+      font-size: clamp(2.7rem, 7vw, 5.8rem);
+      line-height: 0.96;
+      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+    }
+
+    .lead {
+      margin-top: 24px;
+      max-width: 800px;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
       line-height: 1.75;
     }
-    .highlights {
+
+    .actions {
       margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, #00bcd4, #ff4081);
+    }
+
+    .button.primary:hover {
+      background: linear-gradient(135deg, #ff4081, #ffb300);
+    }
+
+    .content-grid {
+      margin-top: 28px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 18px;
     }
-    .highlight {
-      min-height: 150px;
-      padding: 22px;
-      border-radius: 18px;
+
+    .card {
+      min-height: 220px;
+      padding: 24px;
+      border-radius: 22px;
       color: #1b1238;
       background: linear-gradient(135deg, var(--start), var(--end));
-      font-weight: 800;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.38);
+      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.24);
+      overflow: hidden;
     }
-    @media (max-width: 800px) {
-      header { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .highlights { grid-template-columns: 1fr; }
+
+    .card h2 {
+      margin-bottom: 14px;
+      font-size: 1.28rem;
+    }
+
+    .card p,
+    .card li {
+      color: rgba(27, 18, 56, 0.86);
+      line-height: 1.65;
+      font-weight: 700;
+    }
+
+    ul {
+      display: grid;
+      gap: 9px;
+      padding-left: 18px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: #1b1238;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      font-size: 0.92rem;
+      font-weight: 900;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -124,21 +223,52 @@
   </header>
 
   <main>
-    <section class="panel">
-      <h1>About Rajesh Coding</h1>
-      <p>
-        Rajesh Coding is a bright, creative web space built for learning,
-        experimenting, and presenting digital work with confidence.
+    <section class="profile-panel">
+      <span class="eyebrow">R&D Engineer Profile</span>
+      <h1>Rajesh, R&D Engineer</h1>
+      <p class="lead">
+        I work at the intersection of research, prototyping, testing, and
+        practical engineering. My focus is turning ideas into reliable
+        solutions through analysis, experimentation, design thinking, and
+        continuous improvement.
       </p>
-      <p>
-        The focus is simple: clean pages, bold visuals, smooth navigation, and
-        designs that feel lively on desktop and mobile.
-      </p>
-      <div class="highlights">
-        <div class="highlight" style="--start:#ffeb3b;--end:#ff8a00;">Creative web design</div>
-        <div class="highlight" style="--start:#00e5ff;--end:#64ffda;">Responsive layouts</div>
-        <div class="highlight" style="--start:#ff4081;--end:#b388ff;">Colorful experiences</div>
+      <div class="actions">
+        <a class="button primary" href="contact.html">Discuss a Project</a>
+        <a class="button" href="gallery.html">View Work</a>
       </div>
+    </section>
+
+    <section class="content-grid">
+      <article class="card" style="--start:#ffeb3b;--end:#ff8a00;">
+        <h2>Engineering Focus</h2>
+        <p>
+          Product development, technical problem solving, concept validation,
+          process improvement, testing, and translating requirements into
+          workable engineering outcomes.
+        </p>
+      </article>
+
+      <article class="card" style="--start:#00e5ff;--end:#64ffda;">
+        <h2>Core Strengths</h2>
+        <ul>
+          <li>Research-driven design decisions</li>
+          <li>Prototype planning and validation</li>
+          <li>Analytical troubleshooting</li>
+          <li>Clear technical documentation</li>
+        </ul>
+      </article>
+
+      <article class="card" style="--start:#ff4081;--end:#b388ff;">
+        <h2>Skill Areas</h2>
+        <div class="chip-row">
+          <span class="chip">R&D</span>
+          <span class="chip">Innovation</span>
+          <span class="chip">Testing</span>
+          <span class="chip">Design</span>
+          <span class="chip">Documentation</span>
+          <span class="chip">Optimization</span>
+        </div>
+      </article>
     </section>
   </main>
 </body>
