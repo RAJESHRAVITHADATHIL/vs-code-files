@@ -16,10 +16,10 @@
       font-family: "Segoe UI", Arial, sans-serif;
       color: #ffffff;
       background:
-        radial-gradient(circle at 12% 18%, rgba(255, 213, 79, 0.8), transparent 26%),
-        radial-gradient(circle at 88% 12%, rgba(0, 229, 255, 0.7), transparent 28%),
-        radial-gradient(circle at 75% 82%, rgba(255, 64, 129, 0.78), transparent 30%),
-        linear-gradient(135deg, #17153b 0%, #7b1fa2 43%, #ff6f00 100%);
+        radial-gradient(circle at 12% 18%, rgba(0, 229, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 86% 16%, rgba(255, 64, 129, 0.16), transparent 30%),
+        radial-gradient(circle at 72% 82%, rgba(255, 235, 59, 0.1), transparent 28%),
+        linear-gradient(135deg, #050816 0%, #0b1024 44%, #17132d 100%);
       overflow-x: hidden;
     }
 
@@ -32,11 +32,17 @@
     header {
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 26px 0;
+      padding: 22px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
+      margin-top: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+      backdrop-filter: blur(18px);
     }
 
     .logo {
@@ -55,9 +61,10 @@
       border-radius: 12px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, #00e5ff, #ffeb3b 48%, #ff4081);
-      color: #1b1238;
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+      background: rgba(255, 255, 255, 0.12);
+      color: #80f7ff;
+      border: 1px solid rgba(128, 247, 255, 0.42);
+      box-shadow: 0 0 28px rgba(0, 229, 255, 0.18);
       font-weight: 900;
     }
 
@@ -73,11 +80,13 @@
       min-height: 44px;
       padding: 12px 20px;
       border-radius: 999px;
-      color: #191335;
-      background: #ffffff;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
       text-decoration: none;
       font-weight: 800;
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+      backdrop-filter: blur(12px);
       transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
 
@@ -85,8 +94,8 @@
     .hero-button:hover,
     .nav-button.active {
       transform: translateY(-3px);
-      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
-      background: #ffeb3b;
+      box-shadow: 0 18px 38px rgba(0, 229, 255, 0.18);
+      background: rgba(0, 229, 255, 0.18);
     }
 
     main {
@@ -97,7 +106,7 @@
       grid-template-columns: minmax(0, 1.05fr) minmax(290px, 0.95fr);
       align-items: center;
       gap: 42px;
-      padding: 42px 0 70px;
+      padding: 54px 0 70px;
     }
 
     .hero h1 {
@@ -105,13 +114,13 @@
       font-size: clamp(3rem, 8vw, 6.7rem);
       line-height: 0.92;
       letter-spacing: 0;
-      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
     }
 
     .hero p {
       margin-top: 24px;
       max-width: 590px;
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.76);
       font-size: clamp(1rem, 2vw, 1.28rem);
       line-height: 1.6;
     }
@@ -125,11 +134,12 @@
 
     .hero-button.primary {
       color: #ffffff;
-      background: linear-gradient(135deg, #00bcd4, #ff4081);
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.75), rgba(255, 64, 129, 0.72));
+      border-color: rgba(255, 255, 255, 0.22);
     }
 
     .hero-button.primary:hover {
-      background: linear-gradient(135deg, #ff4081, #ffb300);
+      background: linear-gradient(135deg, rgba(255, 64, 129, 0.78), rgba(0, 229, 255, 0.72));
     }
 
     .showcase {
@@ -141,8 +151,9 @@
       position: absolute;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.42);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(18px);
     }
 
     .tile.one {
@@ -150,7 +161,9 @@
       aspect-ratio: 1 / 1.08;
       top: 0;
       right: 0;
-      background: linear-gradient(135deg, #00e5ff, #7c4dff 52%, #ff4081);
+      background:
+        linear-gradient(135deg, rgba(0, 229, 255, 0.34), rgba(124, 77, 255, 0.24) 52%, rgba(255, 64, 129, 0.3)),
+        rgba(255, 255, 255, 0.06);
     }
 
     .tile.two {
@@ -159,8 +172,9 @@
       left: 2%;
       top: 27%;
       background:
-        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.28) 0 12px, transparent 12px 24px),
-        linear-gradient(135deg, #ffeb3b, #ff6f00);
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 12px, transparent 12px 24px),
+        linear-gradient(135deg, rgba(255, 235, 59, 0.24), rgba(255, 111, 0, 0.18)),
+        rgba(255, 255, 255, 0.06);
     }
 
     .tile.three {
@@ -169,9 +183,10 @@
       right: 12%;
       bottom: 0;
       background:
-        radial-gradient(circle at 30% 28%, #ffffff 0 8%, transparent 9%),
-        radial-gradient(circle at 72% 60%, #ffffff 0 7%, transparent 8%),
-        linear-gradient(135deg, #00c853, #00e5ff);
+        radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.72) 0 8%, transparent 9%),
+        radial-gradient(circle at 72% 60%, rgba(255, 255, 255, 0.62) 0 7%, transparent 8%),
+        linear-gradient(135deg, rgba(0, 200, 83, 0.26), rgba(0, 229, 255, 0.2)),
+        rgba(255, 255, 255, 0.06);
     }
 
     .tile-label {
@@ -180,8 +195,10 @@
       bottom: 18px;
       padding: 10px 14px;
       border-radius: 999px;
-      color: #1c1237;
-      background: rgba(255, 255, 255, 0.88);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
       font-size: 0.92rem;
       font-weight: 800;
     }
